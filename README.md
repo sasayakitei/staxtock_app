@@ -1,24 +1,56 @@
-# README
+# 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## コンセプト
+挫折しない学習習慣を身につけるためのサポートツール
 
-Things you may want to cover:
+## タイトル
+**STAXTOCK**
 
-* Ruby version
+- 読み方：スタックストック
+- 意味：積み上げ・蓄積(Stack Stock)
 
-* System dependencies
+## ターゲット
+目標に向けて学習・トレーニング・自己研鑽を続けようと考えている人
 
-* Configuration
+- 年齢層：中高生以上
+- 職業：学生・会社員など
 
-* Database creation
+## ゴール
+- 学んだことをアウトプットする習慣を身につける
+- アウトプットすることを前提とした学習スタイルを身につける
 
-* Database initialization
+## 主な機能
+- 毎日の学習やトレーニングの内容を一元的に記録・蓄積(StackRecords)
+- StackRecordsをカレンダーやグラフ上にプロットし活動量を可視化
+- 所定の目標を達成することによって得られる報酬＝実績システム
+- 実績ポイントの高い順にユーザーを順位付けしてユーザー同士の切磋琢磨を促すランキングシステム
+- 学習内容をTwitter等のSNSに共有
+- 実績ポイントで解放できる追加機能（予定）
+- メンタリングサポート（予定）
 
-* How to run the test suite
+# 使用技術・言語
 
-* Services (job queues, cache servers, search engines, etc.)
+## フロントエンド
+- HTML5/CSS3 (F/W: UIkit)
+- JavaScript (F/W: Vue.js)
 
-* Deployment instructions
+## バックエンド
+- Ruby 2.7.0 (F/W: Ruby on Rails 6.1)
 
-* ...
+## データベース
+- MySQL (AWS)
+- PostgreSQL (Heroku)
+
+## サーバー
+- nginx/unicorn (AWS)
+
+## コンテナ
+- Docker/docker-compose(予定)
+
+## インフラ
+- AWS (VPC, EC2, S3, Route53)
+- Heroku
+
+## その他
+- Git/GitHub (バージョン管理)
+- GitHub Actions (自動テスト・自動デプロイ)
