@@ -1,0 +1,25 @@
+nav.uk-navbar-container.uk-margin uk-navbar="" 
+  .uk-navbar-left
+    = link_to 'Logo', root_path, class: 'uk-navbar-item uk-logo'
+    ul.uk-navbar-nav
+      li
+        = link_to 'ランキング', '#'
+      li
+        = link_to 'カテゴリー', '#'
+        / a href="#" 
+        /   span.uk-icon.uk-margin-small-right uk-icon=("icon: star") 
+        /   | Features
+    .uk-navbar-item
+      div
+        | Some
+        a href="#"  Link
+    .uk-navbar-item
+      form action="javascript:void(0)" 
+        input.uk-input.uk-form-width-small placeholder="Input" type="text" /
+        button.uk-button.uk-button-default Button
+    .uk-navbar-item
+      - if signed_in?
+        = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'uk-button uk-button-default'
+      - else
+        = link_to 'Sign in', new_user_session_path, class: 'uk-button uk-button-default'
+        = link_to 'Sign up', new_user_registration_path, class: 'uk-button uk-button-default'
