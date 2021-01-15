@@ -1,25 +1,20 @@
 nav.uk-navbar-container.uk-margin uk-navbar="" 
   .uk-navbar-left
-    = link_to 'Logo', root_path, class: 'uk-navbar-item uk-logo'
+    = link_to 'staXtock', root_path, class: 'uk-navbar-item uk-logo'
     ul.uk-navbar-nav
       li
-        = link_to 'ランキング', '#'
+        = link_to '注目ユーザー', '#'
       li
         = link_to 'カテゴリー', '#'
-        / a href="#" 
-        /   span.uk-icon.uk-margin-small-right uk-icon=("icon: star") 
-        /   | Features
+  .uk-navbar-center
     .uk-navbar-item
-      div
-        | Some
-        a href="#"  Link
-    .uk-navbar-item
-      form action="javascript:void(0)" 
-        input.uk-input.uk-form-width-small placeholder="Input" type="text" /
-        button.uk-button.uk-button-default Button
+      form.uk-search.uk-search-default
+        a href="" uk-search-icon="" 
+        input.uk-search-input placeholder="Search..." type="search" /
+  .uk-navbar-right
     .uk-navbar-item
       - if signed_in?
         = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'uk-button uk-button-default'
       - else
         = link_to 'Sign in', new_user_session_path, class: 'uk-button uk-button-default'
-        = link_to 'Sign up', new_user_registration_path, class: 'uk-button uk-button-default'
+        = link_to 'Sign up', new_user_registration_path, class: 'uk-button uk-button-primary'
