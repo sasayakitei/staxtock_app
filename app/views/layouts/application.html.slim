@@ -10,5 +10,13 @@ html
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
   body
+    - if flash[:notice]
+      .uk-alert-success uk-alert=""
+        a.uk-alert-close uk-close="" 
+        p = flash[:notice]
+    - if flash[:alert]
+      .uk-alert-danger uk-alert=""
+        a.uk-alert-close uk-close="" 
+        p = flash[:alert]
     = render './layouts/header'
     = yield
