@@ -2,11 +2,21 @@ doctype html
 html
   head
     title
-      | StaxtockApp
+      => yield(:page_title)
+      || StaxtockApp
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
   body
+    - if flash[:notice]
+      .uk-alert-success uk-alert=""
+        a.uk-alert-close uk-close="" 
+        p = flash[:notice]
+    - if flash[:alert]
+      .uk-alert-danger uk-alert=""
+        a.uk-alert-close uk-close="" 
+        p = flash[:alert]
+    = render './layouts/header'
     = yield

@@ -1,0 +1,20 @@
+nav.uk-navbar-container.uk-margin uk-navbar="" 
+  .uk-navbar-left
+    = link_to 'staXtock', root_path, class: 'uk-navbar-item uk-logo'
+    ul.uk-navbar-nav
+      li
+        = link_to '注目ユーザー', '#'
+      li
+        = link_to 'カテゴリー', '#'
+  .uk-navbar-center
+    .uk-navbar-item
+      form.uk-search.uk-search-default
+        a href="" uk-search-icon="" 
+        input.uk-search-input placeholder="Search..." type="search" /
+  .uk-navbar-right
+    .uk-navbar-item
+      - if signed_in?
+        = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'uk-button uk-button-default'
+      - else
+        = link_to 'Sign in', new_user_session_path, class: 'uk-button uk-button-default'
+        = link_to 'Sign up', new_user_registration_path, class: 'uk-button uk-button-primary'
