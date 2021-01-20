@@ -14,6 +14,7 @@ nav.uk-navbar-container.uk-margin uk-navbar=""
   .uk-navbar-right
     .uk-navbar-item
       - if signed_in?
+        = link_to 'MyPage', edit_user_path(current_user), class: 'uk-button uk-button-default'
         = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'uk-button uk-button-default'
       - else
         = link_to 'Sign in', new_user_session_path, class: 'uk-button uk-button-default'
