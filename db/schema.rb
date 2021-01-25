@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_192342) do
+ActiveRecord::Schema.define(version: 2021_01_19_115537) do
+
+  create_table "profiles", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "phone"
+    t.date "birthday"
+    t.integer "address_id"
+    t.integer "workplace_id"
+    t.string "strength"
+    t.string "weakness"
+    t.string "website"
+    t.string "avatar"
+    t.text "introduction"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", default: "No Name"
@@ -25,4 +41,5 @@ ActiveRecord::Schema.define(version: 2021_01_11_192342) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "profiles", "users"
 end

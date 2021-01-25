@@ -11,11 +11,11 @@ html
     = javascript_pack_tag 'application'
   body
     - if flash[:notice]
-      .uk-alert-success uk-alert=""
+      .uk-alert-success.uk-margin-remove uk-alert=""
         a.uk-alert-close uk-close="" 
         p = flash[:notice]
     - if flash[:alert]
-      .uk-alert-danger uk-alert=""
+      .uk-alert-danger.uk-margin-remove uk-alert=""
         a.uk-alert-close uk-close="" 
         p = flash[:alert]
     = render './layouts/header'
