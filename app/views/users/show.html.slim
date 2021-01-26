@@ -23,7 +23,7 @@
               .uk-text-small 250
             
         p アバター、ユーザー名、アカウントID、投稿数、フォロー数、フォロワー数、プロフィール編集へのリンクを配置予定
-        if @user == current_user
+        - if @user == current_user
           .uk-text-center
             = link_to 'プロフィールを編集する', edit_user_path(current_user), class: 'uk-button uk-button-primary'
     div class="uk-width-2-3@m"
