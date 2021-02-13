@@ -1,8 +1,8 @@
 nav.uk-navbar-container.uk-margin.uk-margin-remove-top uk-navbar=""
   .uk-navbar-center.uk-width-3xlarge
-    div class="uk-width-1-3@s"
+    .uk-margin-remove class="uk-width-1-3@s"
       .uk-flex.uk-flex-center
-        ul.uk-navbar-nav class=""
+        ul.uk-navbar-nav
           li
             = link_to '', '#', class: 'uk-navbar-toggle uk-padding-remove', "uk-navbar-toggle-icon": ""
             .uk-navbar-dropdown
@@ -12,13 +12,13 @@ nav.uk-navbar-container.uk-margin.uk-margin-remove-top uk-navbar=""
                 li
                   = link_to 'カテゴリー', '#'
         = link_to 'staXtock', root_path, class: 'uk-navbar-item uk-logo'
-    div class="uk-width-1-3@s"
+    .uk-margin-remove class="uk-width-1-3@s"
       .uk-flex.uk-flex-center
         .uk-navbar-item
             form.uk-search.uk-search-default
               = link_to '', '', 'uk-search-icon': ''
               input.uk-search-input placeholder="" type="search" /
-    div class="uk-width-1-3@s"
+    .uk-margin-remove class="uk-width-1-3@s"
       .uk-flex.uk-flex-around
         .uk-navbar-item.uk-width-medium.uk-flex.uk-flex-around
           - if signed_in?
